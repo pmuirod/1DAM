@@ -1,0 +1,7 @@
+for $cliente in //cliente
+let $factura := //factura[@cliente=$cliente/@id]
+return
+(
+  insert node $factura into $cliente,
+  delete node $factura
+)

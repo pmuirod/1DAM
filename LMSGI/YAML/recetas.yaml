@@ -1,0 +1,23 @@
+%YAML 1.2
+---
+- nombre: Tortilla española
+  # Los tiempos se expresan en minutos
+  tiempo: 45
+  ingredientes:
+    - nombre: patata
+      cantidad: 2
+      # Las unidades pueden ser: pieza, cucharada, g, ml
+      unidad: pieza
+    - nombre: huevo
+      cantidad: 2
+      unidad: pieza
+    - nombre: aceite
+      unidad: ml
+      cantidad: 20
+    - nombre: sal
+      unidad: gr
+      cantidad: 4
+    - nombre: cebolla
+      unidad: pieza
+      cantidad: 25
+# Resto de recetas...

@@ -1,0 +1,25 @@
+<!--Esta es la gramatica de casilleros-->
+<!ELEMENT claustro (profesor|lector)+>
+<!ATTLIST claustro centro CDATA #REQUIRED>
+
+<!ENTITY % datosprof "(apelativo?,nombre,apellidos)">
+<!ENTITY % attrsprof "id        ID     #REQUIRED
+                      casillero CDATA  #IMPLIED">
+
+<!ELEMENT profesor (%datosprof;,departamento?)>
+<!ATTLIST profesor %attrsprof;
+                   sustituye    IDREF     #IMPLIED>
+
+<!ELEMENT lector %datosprof;>
+<!ATTLIST lector %attrsprof;>
+
+<!ELEMENT apelativo     (#PCDATA)>
+<!ELEMENT nombre        (#PCDATA)>
+<!ELEMENT apellidos     (#PCDATA)>
+<!ELEMENT departamento  (#PCDATA)>
+
+<!ENTITY ByG "Biologia y Geologia">
+<!ENTITY HIS "Historia y Geografía">
+<!ENTITY EFI "Educación Física">
+<!ENTITY MAT "Matematicas">
+<!ENTITY ING "Ingles">

@@ -1,0 +1,37 @@
+{
+    "marca":"Hyundai",
+    "modelos":[
+        {
+            "Kona":{"cilindrada":6,"caballos de vapor":198,"velocidad máxima":240,"num de plazas":5,"numero de coches en concesionario":250}
+        },
+        {
+            "Tucson":{"cilindrada":2.5,"caballos de vapor":150,"velocidad maxima":193,"num de plazas":5,"numero de coches en concesionario":190}
+        }
+    ],
+    "unidades":[
+        {
+            "id":243,
+            "modelo":"Kona",
+            "km que tiene":"0",
+            "reservado":true
+        },
+        {
+            "id":165,
+            "modelo":"Tucson",
+            "km que tiene":"500",
+            "reservado":false
+        },
+        {
+            "id":201,
+            "modelo":"Tucson",
+            "km que tiene":"740",
+            "reservado":true
+        },
+        {
+            "id":168,
+            "modelo":"Kona",
+            "km que tiene":"0",
+            "reservado":true
+        }
+    ]
+}

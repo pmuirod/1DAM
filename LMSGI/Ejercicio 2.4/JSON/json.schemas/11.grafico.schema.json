@@ -1,0 +1,105 @@
+{
+    "schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "11.grafico.schema.json",
+    "type": "object",
+    "tittle": "Gráfico",
+    "description": "Registro de entidades en un plano",
+    "properties": {
+        "unidad":{
+            "type": "string",
+            "description": "Unidad de medida del plano",
+            "enum": ["km","hm","dam","m","dm","cm","mm"]
+        },
+        "entidades":{
+            "type": "array",
+            "description": "Listado de entidades en el plano",
+            "items":{
+                "type": "object",
+                "properties": {
+                    "id":{
+                        "type": "integer",
+                        "description": "Identificador único de la entidad",
+                        "minimum": 1
+                    },
+                    "tipo":{
+                        "type": "string",
+                        "description": "Tipo de entidad",
+                        "enum": ["punto","recta","circunferencia","rectangulo"]
+                    },
+                    "coord":{
+                        "type": "array",
+                        "description": "Coordenadas del punto",
+                        "items":{
+                            "type": "integer",
+                            "description": "Coordenada X y coordenada Y"
+                        }
+                    },
+                    "ini":{
+                        "type": "array",
+                        "description": "Coordenadas de inicio de la entidad",
+                        "items":{
+                            "type": "integer",
+                            "description": "Coordenada X y coordenada Y"
+                        }
+                    },
+                    "fin":{
+                        "type": "array",
+                        "description": "Coordenadas de fin de la entidad",
+                        "items":{
+                            "type": "integer",
+                            "description": "Coordenada X y coordenada Y"
+                        }
+                    },
+                    "centro":{
+                        "type": "array",
+                        "description": "Coordenadas del centro de la circunferencia",
+                        "items":{
+                            "type": "integer",
+                            "description": "Coordenada X y coordenada Y"
+                        }
+                    },
+                    "r":{
+                        "type": "integer",
+                        "description": "Radio de la circunferencia"
+                    }
+                },
+                "dependentSchemas":{
+                    "coord":{
+                        "properties":{
+                            "tipo": "punto"
+                        },
+                        "required": ["tipo"]
+                    },
+                    "ini":{
+                        "properties":{
+                            "tipo": ["recta","rectangulo"]
+                        },
+                        "required": ["tipo"]
+                    },
+                    "fin":{
+                        "properties":{
+                            "tipo": ["recta","rectangulo"]
+                        },
+                        "required": ["tipo"]
+                    },
+                    "centro":{
+                        "properties":{
+                            "tipo": "circunferencia"
+                        },
+                        "required": ["tipo"]
+                    },
+                    "r":{
+                        "properties":{
+                            "tipo": "circunferencia"
+                        },
+                        "required": ["tipo"]
+                    }
+                },
+                "additionalProperties": false,
+                "required": ["id","tipo"]
+            }
+        }
+    },
+    "additionalProperties": false,
+    "required": ["unidad","entidades"]
+}

@@ -1,0 +1,17 @@
+"Liga: " || //liga/@nombre,   (:Nombre de la liga:)
+for $equipo in //equipo (:For para iterar sobre equipo:)
+let $entrenador := //persona[@id = $equipo/integrantes/@entrenador]   (:Variable entrenador:)
+count $n   (:Contador para cada equipo:)
+order by $equipo/nombre   (:Se ordena el equipo alfabéticamente por el nombre:)
+return
+(
+  "  " || $n || ". " || $equipo/@nombre,
+  "   - Entrenador: " || $entrenador/nombre || " " || $entrenador/apellidos,
+  "   - Jugadores: ",
+  for $jugadores in //persona[@id = $equipo/integrantes/@jugadores]   (:For para iterar sobre jugadores (He intentado buscar la solución al problema de haber varios jugadores pero no he llegado a encontrarla):)
+  count $i   (:Contador para cada jugador:)
+  order by $jugadores/apellidos   (:Se ordena los jugadores alfabéticamente por los apellidos:)
+  return
+    "     " || $i || ". " || $jugadores/nombre || " " || $jugadores/apellidos || "
+    "
+)

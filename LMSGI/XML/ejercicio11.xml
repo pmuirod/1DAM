@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<unidad>cm</unidad>
+<entidades>
+    <punto>
+        <x>5</x>
+        <y>6</y>
+        <id id="i0001" />
+    </punto>
+    <circunferencia>
+        <centro>
+            <x>9</x>
+            <y>9</y>
+        </centro>
+        <radio>4</radio>
+        <id id="i0002" />
+    </circunferencia>
+    <recta>
+        <punto1>
+            <x>9</x>
+            <y>9</y>
+        <punto1>
+        <punto2>
+            <x>12</x>
+            <y>12</y>
+        <punto2>
+        <id id="i0003" />
+    </recta>
+    <rectangulo>
+        <esquina_superior_derecha>
+            <x>9</x>
+            <y>10</y>
+        <esquina_superior_derecha>
+        <esquina_inferior_izquierda>
+            <x>15</x>
+            <y>6</y>
+        <esquina_inferior_izquierda>
+        <id id="i0004" />
+    </rectangulo>
+</entidades>

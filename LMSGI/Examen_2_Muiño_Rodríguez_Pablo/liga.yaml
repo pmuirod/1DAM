@@ -1,0 +1,66 @@
+%YAML 1.2
+---
+nombre: Liga del barrio
+equipos:
+  - id: e01
+    nombre: Club de Fútbol Patatero
+    localidad: Rota
+    # Presupuesto en euros.
+    presupuesto: 2000
+    integrantes:
+      entrenador:
+        nombre: Perico
+        apellidos: de los Palotes
+        dni: 12345678Z
+        direccion:
+          calle: Callo
+          numero: 22
+          cp: 11520
+          localidad: Rota
+        tlfo: 956123456
+      jugadores:
+        - nombre: Mariquilla
+          apellidos: de la O
+          dni: 01234567Z
+          direccion:
+            calle: Pistacho
+            numero: 2B
+            cp: 21410
+            localidad: Isla Cristina
+          tlfo: 678123456
+        #  Resto de jugadores
+
+  - id:  e02
+    nombre: Futboleros Tuercebotas
+    localidad: Isla Cristina
+    presupuesto: 2200
+    integrantes:
+      entrenador:
+        nombre: Vitorino
+        apellidos: Márquez Redondo
+        dni: 87654321K
+        direccion:
+          calle: Llana
+          numero: 2
+          cp: 23470
+          localidad: Cazorla
+        tlfo: 611234565
+      jugadores:
+        - nombre: Mario
+          apellidos: Blanco Rueda
+          dni: 11223344F
+          direccion:
+            calle: Llana
+            numero: 4
+            cp: 23470
+            localidad: Cazorla
+          tlfo: 611234121
+
+encuentros:
+  - fecha: 2023-11-16
+    local: 
+      equipo: e01
+      goles:  2
+    visitante:
+      equipo: e02
+      goles:  2

@@ -1,0 +1,14 @@
+{
+    "xml.validation.resolveExternalEntities": true,
+    "json.schemas": [
+        {
+            "fileMatch":["casilleros*.json"],
+            "url": "/JSON/json_schemas/casilleros.schema.json"
+        },
+        {
+            "fileMatch": ["recetas*.json"],
+            "url": "/JSON/json_schemas/recetas.schema.json"
+        }
+    ],
+    "yaml.schemas": {}
+}

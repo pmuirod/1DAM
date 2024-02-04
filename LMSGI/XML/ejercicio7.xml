@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<marca>Hyundai</marca>
+<modelos>
+    <Kona>
+            <!--La cilindrada indica los cilindros que tiene el motor-->
+            <!--Los caballos de un coche se miden en CV-->
+            <!--La velocidad de un coche se mide en Km/h-->
+        <cilindrada>6</cilindrada>
+        <caballos_de_vapor>198</caballos_de_vapor>
+        <velocidad_maxima>240</velocidad_maxima>
+        <num_de_plazas>5</num_de_plazas>
+        <numero_de_coches_en_concesionario>250</numero_de_coches_en_concesionario>
+    </Kona>
+    <Tucson>
+        <cilindrada>2.5</cilindrada>
+        <caballos_de_vapor>150</caballos_de_vapor>
+        <velocidad_maxima>193</velocidad_maxima>
+        <num_de_plazas>5</num_de_plazas>
+        <numero_de_coches_en_concesionario>190<numero_de_coches_en_concesionario>
+    </Tucson>
+</modelos>
+<unidades>
+        <!--Si no tiene km es que es nuevo (si no, es de segunda mano)-->
+    <id id="u0243">
+        <modelo>&Kona</modelo>
+        <km_que_tiene>0</km_que_tiene>
+        <reservado>true</reservado>
+    </id>
+    <id id="u0165">
+        <modelo>&Tucson</modelo>
+        <km_que_tiene>500</km_que_tiene>
+        <reservado>false</reservado>
+    </id>
+    <id id="u0201">
+        <modelo>&Tucson</modelo>
+        <km_que_tiene>740</km_que_tiene>
+        <reservado>true</reservado>
+    </id>
+    <id id="u0168">
+        <modelo>&Kona</modelo>
+        <km_que_tiene>0</km_que_tiene>
+        <reservado>true</reservado>
+    </id>
+</unidades>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Ordenadores>
+    <Componentes>
+        <!--Hay módulos de RAM de 2GB, 4GB y 8GB-->
+        <!-- Hay procesadores de Intekl y de Asus-->
+        <!--Hay chasis para ordenadores pequeños, medianos y grandes-->
+        <!--Hay tarjetas gráficas de gama media/baja y de gama alta-->
+        <!-- Hay monitores de 20", 25" y 30"-->
+        <RAM_2GB>
+            <Tipo tipo="RAM" />
+            <Nombre_del_proveedor>Pepito</Nombre_del_proveedor>
+            <Existencias>20</Existencias>
+        </RAM_2GB>
+        <RAM_4GB>
+            <Tipo tipo="RAM" />
+            <Nombre_del_proveedor>Pepito</Nombre_del_proveedor>
+            <Existencias>18</Existencias>
+        </RAM_4GB>
+        
+        <RAM_8GB>
+            <Tipo tipo="RAM" />
+            <Nombre_del_proveedor>Pepito</Nombre_del_proveedor>
+            <Existencias>13</Existencias>
+        </RAM_8GB>
+        <Procesador_Intel>
+            <Tipo tipo="Procesador" />
+            <Nombre_del_proveedor>Manolito</Nombre_del_proveedor>
+            <Existencias>16</Existencias>
+        </Procesador_Intel>
+        <Procesador_Asus>
+            <Tipo tipo="Procesador" />
+            <Nombre_del_proveedor>Manolito</Nombre_del_proveedor>
+            <Existencias>14</Existencias>
+        </Procesador_Asus>
+        <Chasis_Pequeño>
+            <Tipo tipo="Chasis" />
+            <Nombre_del_proveedor>Chari</Nombre_del_proveedor>
+            <Existencias>24</Existencias>
+        </Chasis_Pequeño>
+        <Chasis_Mediano>
+            <Tipo tipo="Chasis" />
+            <Nombre_del_proveedor>Chari</Nombre_del_proveedor>
+            <Existencias>21</Existencias>
+        </Chasis_Mediano>
+        <Chasis_Grande>
+            <Tipo tipo="Chasis" />
+            <Nombre_del_proveedor>Chari</Nombre_del_proveedor>
+            <Existencias>25</Existencias>
+        </Chasis_Grande>
+        <Tarjeta_grafica_Media_Baja>
+            <Tipo tipo="Tarjeta_grafica" />
+            <Nombre_del_proveedor>Manolito</Nombre_del_proveedor>
+            <Existencias>11</Existencias>
+        </Tarjeta_grafica_Media_Baja>
+        <Tarjeta_grafica_Alta>
+            <Tipo tipo="Tarjeta_grafica" />
+            <Nombre_del_proveedor>Manolito</Nombre_del_proveedor>
+            <Existencias>9</Existencias>
+        </Tarjeta_grafica_Alta>
+        <Monitor_20>
+            <Tipo tipo="Monitor" />
+            <Nombre_del_proveedor>Chari</Nombre_del_proveedor>
+            <Existencias>29</Existencias>
+        </Monitor_20>
+        <Monitor_25>
+            <Tipo tipo="Monitor" />
+            <Nombre_del_proveedor>Chari</Nombre_del_proveedor>
+            <Existencias>33</Existencias>
+        </Monitor_25>
+        <Monitor_30>
+            <Tipo tipo="Monitor" />
+            <Nombre_del_proveedor>Chari</Nombre_del_proveedor>
+            <Existencias>15</Existencias>
+        </Monitor_30>
+        <!--más componentes-->
+    </Componentes>
+    <Composiciones>
+        <Composicion1>
+            <Nombre>Ordenador para gamers</Nombre>
+            <Lista_de_componentes>
+                &RAM_4GB
+                &Procesasdor_Asus
+                &Chasis_Mediano
+                &Tarjeta_grafica_Media_Baja
+                &Monitor_30
+            </Lista_de_componentes>
+        </Composicion1>
+        <Composicion2>
+            <Nombre>Ordenador de gama media/baja</Nombre>
+            <Lista_de_componentes>
+                &RAM_2GB
+                &Procesasdor_Intel
+                &Chasis_Pequeño
+                &Tarjeta_grafica_Media_Baja
+                &Monitor_25
+            </Lista_de_componentes>
+        </Composicion2>
+        <Composicion3>
+            <Nombre>Ordenador de gama alta</Nombre>
+            <Lista_de_componentes>
+                &RAM_8GB
+                &Procesasdor_Asus
+                &Chasis_Grande
+                &Tarjeta_grafica_Alta
+                &Monitor_30
+            </Lista_de_componentes>
+        </Composicion3>
+        <!--más composiciones-->
+    </Composiciones>
+</Ordenadores>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<id id="208">
+    <Nombre_y_apellidos>Ivan Pico de Coaña Ros</Nombre_y_apellidos>
+    <Dirección>Calle Vicente Maroto Nº4</Dirección>
+    <Teléfono>600379421</Teléfono>
+    <Lugar_de_nacimiento>Chiclana</Lugar_de_nacimiento>
+    <Padre_y_madre>Paco Pico de Coaña y Paqui Ros</Padre_y_madre>
+</id>
+
+<id id="56">
+    <Nombre_y_apellidos>Manuel Maria Soto Medina</Nombre_y_apellidos>
+    <Dirección>Calle La pólvora Nº2</Dirección>
+    <Teléfono>652894520</Teléfono>
+    <Lugar_de_nacimiento>Rota</Lugar_de_nacimiento>
+    <Padre_y_madre>Ivan Soto y Carmen Medina</Padre_y_madre>
+</id>
+
+<id id="341">
+    <Nombre_y_apellidos>Maximiliam David Bem Morante</Nombre_y_apellidos>
+    <Dirección>Calle Washington Nº3</Dirección>
+    <Teléfono>643852147</Teléfono>
+    <Lugar_de_nacimiento>New York</Lugar_de_nacimiento>
+    <Padre_y_madre>James Bem y Virginia Ros</Padre_y_madre>
+</id>

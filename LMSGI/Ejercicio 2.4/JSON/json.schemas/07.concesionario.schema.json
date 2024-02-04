@@ -1,0 +1,92 @@
+{
+    "schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "07.concesionario.schema.json",
+    "type": "object",
+    "title": "Concesionario",
+    "description": "Registro de coches de un concesionario",
+    "properties": {
+        "concesionario":{
+            "type": "string",
+            "description": "Nombre del concesionario"
+        },
+        "modelos": {
+            "type": "array",
+            "description": "Listado de modelos disponibles en el concesionario",
+            "items":{
+                "type": "object",
+                "properties": {
+                    "id":{"$ref": "#/$defs/id"},
+                    "nombre":{
+                        "type": "string",
+                        "description": "Nombre del modelo"
+                    },
+                    "cilindrada":{
+                        "type": "integer",
+                        "description": "Cilindrada del modelo"
+                    },
+                    "cv":{
+                        "type": "integer",
+                        "description": "Caballos del modelo"
+                    },
+                    "velmax":{
+                        "type": "integer",
+                        "description": "Velocidad máxima del modelo"
+                    },
+                    "plazas":{
+                        "type": "integer",
+                        "description": "Número de plazas del modelo",
+                        "minimum": 2
+                    }
+                },
+                "additionalProperties": false,
+                "required": ["id","nombre","cilindrada","cv","velmax","plazas"]
+            }
+        },
+        "coches":{
+            "type": "array",
+            "description": "Coches que tiene el concesionario",
+            "items":{
+                "type": "object",
+                "properties": {
+                    "id":{
+                        "type": "integer",
+                        "description": "Identificador único del coche",
+                        "minimum": 1
+                    },
+                    "modelo":{"$ref": "#/$defs/id"},
+                    "tipo":{
+                        "type": "string",
+                        "description": "Tipo de coche (nuevo, 2mano)",
+                        "enum": ["nuevo","2mano","km0"]
+                    },
+                    "km":{
+                        "type": "integer",
+                        "description": "Indica los kilometros que tiene el coche"
+                    },
+                    "reservado":{
+                        "type": "boolean",
+                        "description": "Indica si el coche está reservado o no",
+                        "enum": [true,false]
+                    }
+                },
+                "additionalProperties": false,
+                "required": ["id","modelo","tipo"],
+                "dependentSchemas":{
+                    "km":{
+                        "tipo": "2mano"
+                    }
+                }
+            }
+        }
+    },
+    "additionalProperties": false,
+    "required": ["concesionario","modelos","coches"],
+
+    "$defs": {
+        "id":{
+            "type": "integer",
+            "description": "Identificador úncio del modelo",
+            "minimum": 1
+        }
+    }
+}

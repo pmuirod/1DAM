@@ -1,0 +1,21 @@
+[
+    {
+        "nombre": "Tornilla española",
+        "tiempo": 45,
+        "ingredientes":[
+            {"nombre": "papa", "unidad": "pieza", "cantidad": 2},
+            {"nombre": "huevo", "unidad": "pieza", "cantidad": 2},
+            {"nombre": "cebolla", "unidad": "pieza", "cantidad": 0.25},
+            {"nombre": "aceite", "unidad": "gr", "cantidad": 20},
+            {"nombre": "sal", "unidad": "gr", "cantidad": 4}
+        ]
+    },
+    {
+        "nombre": "Bocadillo de anchoas",
+        "tiempo": 4,
+        "ingredientes":[
+            {"nombre": "pan", "unidad": "pieza", "cantidad": 1},
+            {"nombre": "anchoa", "unidad": "pieza", "cantidad": 3}
+        ]
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "id": "1",
+        "fecha de emision": "2023-09-29",
+        "datos del cliente":{"dni":"54802535C","nombre":"Gonzalo","direccion":"Calle Paquito Roman","codigo postal":"11520","poblacion":"Albacete"},
+        "productos":[
+            {"nombre":"leche","cantidad":"2","unidad":"brick","precio/unidad":"0.20","IVA":"superreducido"},
+            {"nombre":"cafe","cantidad":"1","unidad":"paquete","precio/unidad":"0.40","IVA":"reducido"},
+            {"nombre":"pavo","cantidad":"300","unidad":"gramos","precio/unidad":"0.20","IVA":"reducido"}
+        ],
+        "descuento":20
+    },
+    {
+        "id": "2",
+        "fecha de emision": "2023-09-30",
+        "datos del cliente":{"dni":"45996324B","nombre":"Victor","direccion":"Calle Fermin Trujillo","codigo postal":"11550","poblacion":"Huesca"},
+        "productos":[
+            {"nombre":"pan","cantidad":"3","unidad":"barra","precio/unidad":"0.50","IVA":"superreducido"},
+            {"nombre":"fresa","cantidad":"1","unidad":"paquete","precio/unidad":"1.20","IVA":"reducido"},
+            {"nombre":"queso","cantidad":"250","unidad":"gramos","precio/unidad o kg":"0.15","IVA":"superreducido"},
+            {"nombre":"Mermelada","cantidad":"2","unidad":"tarro","precio/unidad o kg":"0.30","IVA":"reducido"},
+            {"nombre":"Refresco","cantidad":"6","unidad":"lata","precio/unidad o kg":"0.80","IVA":"reducido"},
+            {"nombre":"vino","cantidad":"1","unidad":"botella","precio/unidad o kg":"5.50","IVA":"general"}
+        ],
+        "descuento":null
+    }
+]

@@ -1,0 +1,9 @@
+--- !!map
+!!str nombre: Pedro Martinez Alvárez !!str
+!!str edad: 32 !!int
+!!str casado: true !!bool
+!!str nacimiento: 1991-05-07 !!int
+!!str direccion:
+  - !!str calle: Callo !!str
+  - !!str num: 5 !!int
+  - !!str cp :12345 !!int

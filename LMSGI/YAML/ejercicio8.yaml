@@ -1,0 +1,52 @@
+%YAML 1.2
+---
+- marca: Hyandai
+- modelos:
+  - &Kona
+        # La cilindrada indica los cilindros que tiene el motor
+        # Los caballos de un ccoche se miden en CV
+        # La velocidad de un coche se mide en Km/h
+        cilindrada: 6
+        caballos de vapor: 198
+        velocidad máxima: 240
+        num de plazas: 5
+        numero de coches en concesionario: 250
+  - &Tucson
+        clinidrada: 2.5
+        caballos de vapor: 150
+        velocidad máxima: 193
+        num de plazas: 5
+        numero de coches en concesionario: 190
+
+- unidades:
+    # Si no tiene km es que es nuevo (si no, es de segunda mano)
+  - id: 243
+    modelo: *Kona
+    km que tiene: 0
+    reservado: *Paqui
+  - id: 165
+    modelo: *Tucson
+    km que tiene: 500
+    reservado: null
+  - id: 201
+    modelo: *Tucson
+    km que tiene: 740
+    reservado: *Ramón
+  - id: 168
+    modelo: *Kona
+    km que tiene: 0
+    reservado: *Lola
+
+- Clientes:
+  - &Paqui
+      nombre: Paqui Rodríguez Quirós
+      direccion: Calle Antonio Recio
+      telefono: 859355824
+  - &Ramón
+      nombre: Ramón Hinestrosa Maroto
+      direccion: Calle Fermin Trujillo
+      telefono: 148956892
+  - &Lola
+      nombre: Lola Niño Valverde
+      direccion: Calle Amador Rivas
+      telefono: 789456235

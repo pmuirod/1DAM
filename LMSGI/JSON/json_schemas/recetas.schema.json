@@ -1,0 +1,40 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "recetas.schema.json",
+
+    "title": "Recetas",
+    "description": "Gramática para recetas de cocina",
+    "type": "array",
+    "items":{
+        "type": "object",
+        "required":["nombre", "tiempo", "ingredientes"],
+        "additionalProperties": false,
+        "properties":{
+            "nombre":{"$ref": "#$defs/nombre_estandar"},
+            "tiempo":{
+                "description": "Tiempo de elaboración en minutos",
+                "type": "number"
+            },
+            "ingredientes":{
+                "type": "array",
+                "items:":{
+                    "type": "object",
+                    "required":["nombre", "unidad", "cantidad"],
+                    "additionalProperties": false,
+                    "properties":{
+                        "nombre":{"$ref": "#$defs/nombre_estandar"},
+                        "unidad":{
+                            "enum":["pieza", "gr", "ml"]
+                        },
+                        "cantidad":{"type": "number"}
+                    }
+                }
+            }
+        }
+    },
+    "$defs": {
+        "nombre_estandar":{
+            "type": "string"
+        }
+    }
+}

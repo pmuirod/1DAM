@@ -1,0 +1,22 @@
+%YAML 1.2
+---
+- id: 208
+  Nombre y apellido: Ivan Pico de Coaña Ros
+  Dirección: Calle Vicente Maroto Nº4
+  Teléfono: 600379421
+  Lugar de nacimiento: Chiclana
+  Padre y madre: Paco Pico de Coaña y Paqui Ros
+
+- id: 56
+  Nombre y apellidos: Manuel Maria Soto Medina
+  Dirección: Calle La pólvora Nº2
+  Teléfono: 652894520
+  Lugar de nacimiento: Rota
+  Padre y madre: Ivan Soto y Carmen Medina
+
+- id: 341
+  Nombre y apellidos: Maximilimiam David Bem Morante
+  Dirección: Calle Washington Nº3
+  Teléfono: 643852147
+  Lugar de nacimiento: New York
+  Padre y madre: James Bem y Virginia Ros

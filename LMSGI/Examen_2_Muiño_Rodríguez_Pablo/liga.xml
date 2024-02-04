@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE liga SYSTEM "DTD/liga.dtd">
+
+<liga nombre="Liga del barrio">
+   <participantes>
+      <persona id="p01">
+         <nombre>Perico</nombre>
+         <apellidos>de los Palotes</apellidos>
+         <dni>12345678Z</dni>
+         <direccion>
+            <calle>Callo</calle>
+            <numero>22</numero>
+            <cp>11520</cp>
+            <localidad>Rota</localidad>
+         </direccion>
+         <tlfo>956123456</tlfo>
+      </persona>
+
+      <persona id="p02">
+         <nombre>Mariquilla</nombre>
+         <apellidos>de la O</apellidos>
+         <dni>01234567L</dni>
+         <direccion>
+            <calle>Pistacho</calle>
+            <numero>2</numero>
+            <cp>21410</cp>
+            <localidad>Isla Cristina</localidad>
+         </direccion>
+         <tlfo>678123456</tlfo>
+      </persona>
+
+      <persona id="p03">
+         <nombre>Vitorino</nombre>
+         <apellidos>Márquez Redondo</apellidos>
+         <dni>87654321K</dni>
+         <direccion>
+            <calle>Llana</calle>
+            <numero>2</numero>
+            <cp>23470</cp>
+            <localidad>Cazorla</localidad>
+         </direccion>
+         <tlfo>611234565</tlfo>
+      </persona>
+
+      <persona id="p04">
+         <nombre>Mario</nombre>
+         <apellidos>Blanco Rueda</apellidos>
+         <dni>11223344FK</dni>
+         <direccion>
+            <calle>Llana</calle>
+            <numero>4</numero>
+            <cp>23470</cp>
+            <localidad>Cazorla</localidad>
+         </direccion>
+         <tlfo>611234121</tlfo>
+      </persona>
+
+      <!-- Resto de participantes -->
+   </participantes>
+
+   <equipos>
+      <equipo id="e01" nombre="Club de Fútbol Patatero">
+         <localidad>Rota</localidad>
+         <presupuesto>2000 <!-- en euros --></presupuesto>
+         <!-- jugadores es una lista de al menos once jugadores. p.e. "p02 p05" -->
+         <integrantes entrenador="p01" jugadores="p02"/>
+      </equipo>
+
+      <equipo id="e02" nombre="Futboleros Tuercebotas">
+         <localidad>Isla  Cristina</localidad>
+         <presupuesto>2200</presupuesto>
+         <integrantes entrenador="p03" jugadores="p04"/>
+      </equipo>
+
+      <!-- Más equipos participantes -->
+   </equipos>
+
+   <encuentro fecha="2023-11-16" local="e01" visitante="e02" goles_local="2" goles_visitante="2"/>
+   <!-- Resto de encuentros -->
+</liga>

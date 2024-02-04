@@ -1,0 +1,39 @@
+<!--Esta es la gramática de liga.xml-->
+<!ELEMENT liga (participantes,equipos,encuentro)>
+<!ATTLIST liga  nombre      CDATA       #REQUIRED>
+
+<!ELEMENT participantes (persona)+>
+
+<!ELEMENT persona (nombre,apellidos,dni,direccion,tlfo)>
+<!ATTLIST persona   id      ID      #REQUIRED>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT direccion (calle,numero,cp,localidad)>
+
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT cp (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+
+<!ELEMENT tlfo (#PCDATA)>
+
+<!ELEMENT equipos (equipo)+>
+<!ELEMENT equipo (localidad,presupuesto,integrantes)>
+<!ATTLIST equipo    id      ID      #REQUIRED
+                    nombre  CDATA   #REQUIRED>
+
+<!ELEMENT presupuesto (#PCDATA)>
+<!ELEMENT integrantes EMPTY>
+<!ATTLIST integrantes   entrenador      IDREF       #REQUIRED
+                        jugadores       IDREFS      #REQUIRED>
+
+<!ELEMENT encuentro EMPTY>
+<!ATTLIST encuentro fecha               CDATA         #REQUIRED
+                    local               IDREF         #REQUIRED
+                    visitante           IDREF         #REQUIRED
+                    goles_local         NMTOKEN       #REQUIRED
+                    goles_visitante     NMTOKEN       #REQUIRED>
+
+                    

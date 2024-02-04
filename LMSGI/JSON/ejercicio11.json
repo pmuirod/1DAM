@@ -1,0 +1,33 @@
+{
+    "unidad":"cm",
+    "entidades":[
+        {
+            "punto":{"x":5,"y":6},
+            "id":1
+        },
+        {
+            "recta":{
+                "punto1":{"x":9,"y":9},
+                "punto2":{"x":12,"y":12}
+            },
+            "id":2
+        },
+        {
+            "rectangulo":{
+                "esquina superior derecha":{"x":9,"y":10},
+                "esquina inferior izquierda":{"x":15,"y":6}
+            },
+            "id":3
+        },
+        {
+            "circunferencia":{
+                "centro":{
+                    "x":5,
+                    "y":6
+                },
+                "radio": 4
+            },
+            "id":4
+        }
+    ]
+}

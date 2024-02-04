@@ -1,0 +1,12 @@
+<!--Esta es la gramatica de recetas-->
+<!ELEMENT recetas (receta)+>
+
+<!ELEMENT receta (ingrediente)+>
+<!ATTLIST receta id             ID          #REQUIRED
+                 nombre         CDATA       #REQUIRED
+                 preparacion    NMTOKEN     #REQUIRED>
+
+<!ELEMENT ingrediente EMPTY>
+<!ATTLIST ingrediente nombre        CDATA               #REQUIRED
+                      unidad        (pieza|gramo|cc)    #REQUIRED
+                      cantidad      NMTOKEN             #REQUIRED>

@@ -1,0 +1,36 @@
+<!--Esta es la gramatica de 05.facturas-->
+<!ELEMENT facturacion (clientes,inventario,factura)>
+<!ATTLIST facturacion empresa       CDATA       #REQUIRED>
+
+<!ELEMENT clientes (cliente+)>
+
+<!ELEMENT cliente (dni,nombre,direccion+)>
+<!ATTLIST cliente  id      ID      #REQUIRED>
+
+<!ELEMENT dni (#PCDATA)>
+
+<!ELEMENT nombre (#PCDATA)>
+
+<!ELEMENT direccion (domicilio,cp,poblacion)>
+
+<!ELEMENT domicilio (#PCDATA)>
+
+<!ELEMENT cp (#PCDATA)>
+<!ELEMENT poblacion (#PCDATA)>
+
+<!ELEMENT inventario (producto+)>
+<!ELEMENT producto (#PCDATA)>
+<!ATTLIST producto codigo       ID                             #REQUIRED
+                   nombre       CDATA                          #REQUIRED
+                   iva          (reducido|superreducido)       #REQUIRED>
+
+<!ELEMENT factura (item+)>
+<!ATTLIST factura   codigo      ID          #REQUIRED
+                    cliente     IDREF       #REQUIRED
+                    fecha       NMTOKEN     #REQUIRED      
+                    descuento   CDATA       #REQUIRED>
+
+<!ELEMENT item EMPTY>
+<!ATTLIST item      producto    IDREF       #REQUIRED
+                    precio      NMTOKEN     #REQUIRED
+                    cantidad    NMTOKEN     #REQUIRED>

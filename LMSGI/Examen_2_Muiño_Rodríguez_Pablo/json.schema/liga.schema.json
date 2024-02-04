@@ -1,0 +1,198 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "liga.schema.json",
+    "type": "object",
+    "tittle": "Liga",
+    "description": "Listado de ligas",
+    "properties": {
+        "nombre":{
+            "type": "string",
+            "description": "Nombre de la liga"
+        },
+        "equipos":{
+            "type": "array",
+            "description": "Lista de equipos participantes en la liga",
+            "items":{
+                "type": "object",
+                "properties":{
+                    "id":{"$ref": "#/$defs/id"},
+                    "nombre":{
+                        "type": "string",
+                        "description": "Nombre del equipo"
+                    },
+                    "localidad":{
+                        "type": "string",
+                        "description": "Localidad del equipo"
+                    },
+                    "presupuesto":{
+                        "type": "integer",
+                        "description": "Presupuesto del equipo",
+                        "minimum": 0
+                    },
+                    "integrantes":{
+                        "type": "object",
+                        "description": "Integrantes del equipo",
+                        "properties":{
+                            "entrenador":{
+                                "type": "object",
+                                "description": "Entrenador del equipo",
+                                "properties":{
+                                    "nombre":{
+                                        "type": "string",
+                                        "description": "Nombre del entrenador"
+                                    },
+                                    "apellidos":{
+                                        "type": "string",
+                                        "description": "Apellidos del entrenador"
+                                    },
+                                    "dni":{
+                                        "type": "string",
+                                        "description": "dni del entrenador"
+                                    },
+                                    "direccion":{
+                                        "type": "object",
+                                        "description": "Dirección del entrenador",
+                                        "properties":{
+                                            "calle":{
+                                                "type": "string",
+                                                "description": "Calle del domicilio"
+                                            },
+                                            "numero":{
+                                                "type": "integer",
+                                                "description": "Número del domicilio",
+                                                "minimum": 1
+                                            },
+                                            "cp":{
+                                                "type": "integer",
+                                                "description": "Código postal donde se encuentre el domicilio",
+                                                "minLength": 5,
+                                                "maxLenght": 5
+                                            },
+                                            "localidad":{
+                                                "type": "string",
+                                                "description": "Localidad donde se encuentra el domiciolio"
+                                            }
+                                        },
+                                        "additionalProperties": false,
+                                        "required": ["calle","numero","cp","localidad"]
+                                    },
+                                    "tlfo":{
+                                        "type": "integer",
+                                        "description": "Número de teléfono del entrenador",
+                                        "minLength": 9,
+                                        "maxLenght": 9
+                                    }
+                                },
+                                "additionalProperties": false,
+                                "required": ["nombre","apellidos","dni","direccion"]
+                            },
+                            "jugadores":{
+                                "type": "array",
+                                "description": "Jugadores del equipo",
+                                "items":{
+                                    "type": "object",
+                                    "properties":{
+                                        "nombre":{
+                                            "type": "string",
+                                            "description": "Nombre del jugador"
+                                        },
+                                        "apellidos":{
+                                            "type": "string",
+                                            "description": "Apellidos del jugador"
+                                        },
+                                        "dni":{
+                                            "type": "string",
+                                            "description": "dni del jugador"
+                                        },
+                                        "direccion":{
+                                            "type": "object",
+                                            "description": "Dirección del jugador",
+                                            "properties":{
+                                                "calle":{
+                                                    "type": "string",
+                                                    "description": "Calle del domicilio"
+                                                },
+                                                "numero":{
+                                                    "type": "integer",
+                                                    "description": "Número del domicilio",
+                                                    "minimum": 1
+                                                },
+                                                "cp":{
+                                                    "type": "integer",
+                                                    "description": "Código postal donde se encuentre el domicilio",
+                                                    "minLength": 5,
+                                                    "maxLenght": 5
+                                                },
+                                                "localidad":{
+                                                    "type": "string",
+                                                    "description": "Localidad donde se encuentra el domiciolio"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "additionalProperties": false,
+                        "required": ["entrenador","jugadores"]
+                    }
+                },
+                "additionalProperties": false,
+                "required": ["id","nombre","localidad","presupuesto","integrantes"]
+            }
+        },
+        "encuentros":{
+            "type": "array",
+            "description": "Lista de encuentros",
+            "items":{
+                "type": "object",
+                "properties":{
+                    "fecha":{
+                        "type": "string",
+                        "description": "Fecha del encuentro con el formato AAAA-MM-DD",
+                        "format": "date"
+                    },
+                    "local":{
+                        "type": "object",
+                        "description": "Equipo local",
+                        "properties":{
+                            "equipo":{"$ref": "#/$defs/id"},
+                            "goles":{
+                                "type": "integer",
+                                "description":"Goles del equipo local",
+                                "minimum": 0
+                            }
+                        },
+                        "additionalProperties": false,
+                        "required": ["equipo","goles"]
+                    },
+                    "visitante":{
+                        "type": "object",
+                        "description": "Equipo visitante",
+                        "properties":{
+                            "equipo":{"$ref": "#/$defs/id"},
+                            "goles":{
+                                "type": "integer",
+                                "description":"Goles del equipo visitante",
+                                "minimum": 0
+                            }
+                        },
+                        "additionalProperties": false,
+                        "required": ["equipo","goles"]
+                    }
+                },
+                "additionalProperties": false,
+                "required": ["fecha","local","visitante"]
+            }
+        }
+    },
+    "additionalProperties": false,
+    "required": ["nombre","equipos","encuentros"],
+
+    "$defs":{
+        "id":{
+            "type": "string",
+            "description": "Identificador único del equipo"
+        }
+    }
+}

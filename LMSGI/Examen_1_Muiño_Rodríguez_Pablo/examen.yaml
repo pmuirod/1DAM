@@ -1,0 +1,87 @@
+%YAML 1.2
+---
+Ordenadores:
+  - Componentes:
+  #Hay módulos de RAM de 2GB, 4GB y 8GB
+  #Hay procesadores de Intel y de Asus
+  #Hay chasis para ordenadores pequeños, medianos y grandes
+  #Hay tajetas gráficas de gama media/baja y de gama alta
+  #Hay monitores de 20", 25" y 30"
+
+    - &RAM_2GB
+        Tipo: RAM
+        Nombre_del_proveedor: Pepito
+        Existencias: 20
+    - &RAM_4GB
+        Tipo: RAM
+        Nombre_del_proveedor: Pepito
+        Existencias: 18
+    - &RAM_8GB
+        Tipo: RAM
+        Nombre_del_proveedor: Pepito
+        Existencias: 13
+    - &Procesador_Intel
+        Tipo: Procesador
+        Nombre_del_proveedor: Manolito
+        Existencias: 16
+    - &Procesador_Asus
+        Tipo: Procesador
+        Nombre_del_proveedor: Manolito
+        Existencias: 14
+    - &Chasis_Pequeño
+        Tipo: Chasis
+        Nombre_del_proveedor: Chari
+        Existencias: 24
+    - &Chasis_Mediano
+        Tipo: Chasis
+        Nombre_del_proveedor: Chari
+        Existencias: 21
+    - &Chasis_Grande
+        Tipo: Chasis
+        Nombre_del_proveedor: Chari
+        Existencias: 25
+    - &Tarjeta_grafica_Media_Baja
+        Tipo: Tarjeta_grafica
+        Nombre_del_proveedor: Manolito
+        Existencias: 11
+    - &Tarjeta_grafica_Alta
+        Tipo: Tarjeta_grafica
+        Nombre_del_proveedor: Manolito
+        Existencias: 9
+    - &Monitor_20
+        Tipo: Monitor
+        Nombre_del_proveedor: Chari
+        Existencias: 29
+    - &Monitor_25
+        Tipo: Monitor
+        Nombre_del_proveedor: Chari
+        Existencias: 33
+    - &Monitor_30
+        Tipo: Monitor
+        Nombre_del_proveedor: Chari
+        Existencias: 15
+    #más componentes...
+
+  - Composiciones:
+    - Nombre: Ordenador para gamers
+      Lista_de_componentes:
+      - *RAM_4GB
+      - *Procesador_Asus
+      - *Chasis_Mediano
+      - *Tarjeta_grafica_Media_baja
+      - *Monitor_30
+    - Nombre: Ordenador de gama media/baja
+      Lista_de_componentes:
+      - *RAM_2GB
+      - *Procesador_Intel
+      - *Chasis_Pequeño
+      - *Tarjeta_grafica_Media_baja
+      - *Monitor_25
+    - Nombre: Ordenador de gama alta
+      Lista_de_componentes:
+      - *RAM_8GB
+      - *Procesador_Asus
+      - *Chasis_Grande
+      - *Tarjeta_grafica_Alta
+      - *Monitor_30
+    #más composiciones...

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<id>1</id>
+    <!--La fecha se ha de expresar de la siguiente manera: año-mes-dia-->
+<fecha_de_emision>2023-09-29</fecha_de_emision>
+<datos_del_cliente>
+    <dni>54802535C</dni>
+    <nombre>Gonzalo</nombre>
+    <direccion>Calle Paquito Roman</direccion>
+    <codigo_postal>11520<codigo_postal>
+    <poblacion>Albacete</poblacion>
+<datos_del_cliente>
+<productos>
+        <!--Las unidades pueden ser: brick, paquete, gramos, barra, tarro, lata, botella y bolsa-->
+    <nombre leche>
+        <cantidad>2</cantidad>
+        <unidad>brick</brick>
+        <precio_unidad>0.20</precio_unidad>
+        <IVA>superreducido</IVA>
+    </nombre>
+    <nombre cafe>
+        <cantidad>2</cantidad>
+        <unidad>paquete</brick>
+        <precio_unidad>0.40</precio_unidad>
+        <IVA>reducido</IVA>
+    </nombre>
+    <nombre pavo>
+        <cantidad>300</cantidad>
+        <unidad>gramos</brick>
+        <precio_unidad>0.20</precio_unidad>
+        <IVA>reducido</IVA>
+    </nombre>
+</productos>
+<descuento>20</descuento>
+<id>2</id>
+<fecha_de_emision>2023-09-30</fecha_de_emision>
+<datos_del_cliente>
+    <dni>15996324B</dni>
+    <nombre>Victor</nombre>
+    <direccion>Calle Fermin Trujillo</direccion>
+    <codigo_postal>11550<codigo_postal>
+    <poblacion>Huesca</poblacion>
+<datos_del_cliente>
+<productos>
+    <nombre pan>
+        <cantidad>3</cantidad>
+        <unidad>barra</brick>
+        <precio_unidad>0.50</precio_unidad>
+        <IVA>superreducido</IVA>
+    </nombre>
+    <nombre fresa>
+        <cantidad>1</cantidad>
+        <unidad>paquete</brick>
+        <precio_unidad>1.20</precio_unidad>
+        <IVA>reducido</IVA>
+    </nombre>
+    <nombre queso>
+        <cantidad>250</cantidad>
+        <unidad>gramos</brick>
+        <precio_unidad>0.15</precio_unidad>
+        <IVA>superreducido</IVA>
+    </nombre>
+    <nombre mermelada>
+        <cantidad>2</cantidad>
+        <unidad>tarro</brick>
+        <precio_unidad>0.30</precio_unidad>
+        <IVA>reducido</IVA>
+    </nombre>
+    <nombre refresco>
+        <cantidad>6</cantidad>
+        <unidad>lata</brick>
+        <precio_unidad>0.80</precio_unidad>
+        <IVA>reducido</IVA>
+    </nombre>
+    <nombre vino>
+        <cantidad>1</cantidad>
+        <unidad>botella</brick>
+        <precio_unidad>5.50</precio_unidad>
+        <IVA>general</IVA>
+    </nombre>
+<descuento>null</descuento>
